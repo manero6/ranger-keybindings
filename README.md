@@ -1,6 +1,11 @@
 # Ranger Keybindings
 The following custom keybindings can be added to the `rc.conf` file.
 
+  * [7z](#7z)
+  * [xclip](#xclip)
+
+---
+
 ## 7z
 Extract zip files using `7z`.
 
@@ -10,8 +15,6 @@ map x7 shell FILE_TYPE="`file -b %s|cut -d\, -f1`"; ZIP_FILE_NOEXT="`echo %s|rev
 # extract the zip file without creating a new directory
 map xx7 shell FILE_TYPE="`file -b %s|cut -d\, -f1`"; grep -iq zip <<< $FILE_TYPE && 7z x %s || echo "Can't extract '$FILE_TYPE' -> %s"
 ```
-
----
 
 ## xclip
 Copy the content of a file using `xclip`.
